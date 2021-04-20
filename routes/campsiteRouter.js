@@ -3,6 +3,8 @@ const Campsite = require('../models/campsite');
 
 const campsiteRouter = express.Router();
 
+const campsiteRouter.use(bodyParser.json());
+
 campsiteRouter.route('/')
 .get((req, res, next) => {
     Campsite.find()
