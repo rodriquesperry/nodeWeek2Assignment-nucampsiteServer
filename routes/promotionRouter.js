@@ -53,7 +53,7 @@ promotionRouter.route('/:promotionId')
 })
 .put((req, res, next) => {
   Promotion.findByIdAndUpdate(req.params.promotionId, {
-    $SET: req.body
+    $set: req.body
   }, { new: true })
   .then(promotion => {
     res.statusCode = 200;
